@@ -10,9 +10,11 @@ class DictaChevServer(object):
         return "fuck yeh"
 
     @cherrypy.expose
-    def create_note(self):
+    def create_note(self, **params):
+        title = params['title']
+        text = params['text']
         note = Note()
-        note.create_note("marley's box", "open all hours..with a kebab and a back alley")
+        note.create_note(text, title)
         return "note created"
 
 def start_server():
