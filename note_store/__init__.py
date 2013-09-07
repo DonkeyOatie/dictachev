@@ -1,1 +1,2 @@
-from store import Note
+from evernotestore import EVNote
+from dropboxstore import DBNote

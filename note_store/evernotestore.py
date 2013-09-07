@@ -2,7 +2,7 @@ from evernote.api.client import EvernoteClient
 import evernote.edam.type.ttypes as Types
 import datetime
 
-class Note():
+class EVNote():
     developer_token = 'S=s1:U=75daf:E=148523ea620:C=140fa8d7a22:P=1cd:A=en-devtoken:V=2:H=1aff37da54eb4416edc62a633e525b72'
 
     def __init__(self, **kwargs):

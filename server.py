@@ -1,7 +1,7 @@
 import cherrypy
 import argparse
 import os
-from note_store import Note
+from note_store import EVNote, DBNote
 
 class DictaChevServer(object):
     
@@ -13,9 +13,12 @@ class DictaChevServer(object):
     def create_note(self, **params):
         title = params['title']
         text = params['text']
-        note = Note()
+        note = EVNote()
         note.create_note(text, title)
         return "note created"
+
+def CORS():
+    cherrypy.response.headers['Access-Control-Allow-Origin'] = '*'
 
 def start_server():
     """ Starts the client proxy """
@@ -31,7 +34,7 @@ def start_server():
         'server.socket_port': args.port,
         'tools.staticdir.root': os.path.abspath(os.path.join(os.path.dirname(__file__), 'static'))
     })
-
+    cherrypy.tools.CORS = cherrypy.Tool('before_finalize', CORS)
     cherrypy.quickstart(DictaChevServer())
 
 if __name__ == '__main__':
