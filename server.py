@@ -11,8 +11,8 @@ class DictaChevServer(object):
 
     @cherrypy.expose
     def create_note(self, **params):
-        title = params['title']
-        text = params['text']
+        title = params.get('title', '')
+        text = params.get('text', '')
         note = EVNote()
         note.create_note(text, title)
         return "note created"
