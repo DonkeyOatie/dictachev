@@ -37,7 +37,7 @@ function init() {
 
 var saveText = function() {
 
-	$.post("http://127.0.0.1:9000/create_note", { 'title': $('#speech-page-content').val() } );
+	$.post("http://127.0.0.1:9000/create_note", { 'text': $('#speech-page-content').val() } );
 
 };
 

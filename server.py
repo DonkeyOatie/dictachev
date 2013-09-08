@@ -2,6 +2,7 @@ import cherrypy
 import argparse
 import os
 from note_store import EVNote, DBNote
+import datetime
 
 class DictaChevServer(object):
     
@@ -11,7 +12,7 @@ class DictaChevServer(object):
 
     @cherrypy.expose
     def create_note(self, **params):
-        title = params.get('title', '')
+        title = params.get('title', str(datetime.datetime.now()))
         text = params.get('text', '')
         note = EVNote()
         note.create_note(text, title)
