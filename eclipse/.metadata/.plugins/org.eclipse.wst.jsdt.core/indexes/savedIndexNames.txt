@@ -1,0 +1,6 @@
+INDEX VERSION 1.122+/home/john/programming/dictachev/eclipse/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+583991161.index
+2157783047.index
+1183874613.index
+1462820416.index
+569451742.index

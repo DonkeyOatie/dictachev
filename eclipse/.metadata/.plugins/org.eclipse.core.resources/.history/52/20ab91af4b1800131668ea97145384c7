@@ -1,0 +1,162 @@
+/*
+ * Add your Stylesheet contents here
+ */
+
+body {
+	margin-top:100px;
+	background: url('GMLIB/themes/gmc/bg.png') fixed;
+	color:#EEE;
+	font-size:35px;
+}
+
+h2 {
+	text-align: center;
+	font-size:30px;
+}
+
+p {
+	margin: 20px;
+}
+
+.group {
+	position: relative;
+	-webkit-border-radius: 8px;
+	border: solid #aaa 1px;
+	margin: 16px;
+	overflow:hidden;
+	background-color:#111111;
+}
+
+.group .title{
+	top: 0;
+	bottom: 0;
+	left: 0px;
+	padding: 10px;
+	-webkit-border-top-left-radius: 8px;
+	-webkit-border-top-right-radius: 8px;
+	vertical-align: middle;
+	background: rgba(0,0,0,0.1);
+	border-bottom: 1px solid #aaa;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.group .field {
+	padding-left: 10px;
+	display: block;
+	position: relative;
+	border-left: 1px solid #fafafa;
+	padding-top: 10px;
+	word-wrap: break-word;
+}
+
+.group.closed .field {
+	position: absolute;
+	left: -1000px;
+}
+	
+.group.closed .title {
+	-webkit-border-bottom-left-radius: 8px;
+	border-bottom: none;
+}
+
+.group .field:last-child {
+	padding-bottom: 10px;
+}
+
+.group .field .label {
+	padding: 0 4px;
+	width: 150px;
+	font-size: 12px;
+	text-align: right;
+	display: table-cell;
+}
+
+.group .field .value {
+	display: table-cell;
+	padding: 0 8px 0 4px;
+}
+
+#main {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+#content {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+}
+
+#about {
+    padding-bottom: 20px;
+    font-weight: normal;
+}
+
+#example-type {
+    color: gray;
+    font-size: 14px;
+}
+
+#speech-content-elements {
+    position: relative;
+    margin: auto;
+    width: 60%;
+    height: 60%;
+    max-height: 300px;
+    max-width: 800px;
+    border: solid 1px #ccc;
+}
+
+#speech-page-content {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    border: none;
+    resize: none;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+}
+
+#speech-page-content:focus {
+    outline: none;
+}
+
+.speech-content-mic {
+    width: 25px;
+    height: 25px;
+    cursor:pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.speech-mic {
+    background: url("mic.gif") no-repeat 50% 50%;
+    background-size: contain;
+}
+
+.speech-mic-works {
+    background: url("mic-animate.gif") no-repeat 50% 50%;
+    background-size: contain;
+}
+
+#authority {
+    padding-top: 10px;
+}
+
+#speech-page-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+#speech-page-content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+#speech-page-content::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
