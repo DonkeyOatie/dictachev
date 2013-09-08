@@ -19,23 +19,26 @@ function init() {
 	// BUTTON AND INPUT WIDGETS
 	
 	var phoneBtn = new gm.widgets.Button({
-		callBack: callPhone,
+		callBack: startRecognition,
 		label:"Record",
-        parentElement: document.getElementById('phone-button')
+        parentElement: document.getElementById('speech-start')
 	});
-	phoneBtn.render(); // associated html element id=phone-button
+	phoneBtn.render(); 
 	
-
+	var saveBtn = new gm.widgets.Button({
+		callBack: saveText,
+		label:"Save",
+        parentElement: document.getElementById('speech-save')
+	});
+	saveBtn.render(); 
     
 }
 
-// GM API CALLS
 
-var audioHandle;
+var saveText = function() {
 
-var play = function() {
-	audioHandle = gm.media.play('test.mp3', 'mixedAudio');
-	console.log('clicked');
+	$.post("http://127.0.0.1:9000/create_note", { 'title': $('#speech-page-content').val() } );
+
 };
 
 var pause = function(e) {

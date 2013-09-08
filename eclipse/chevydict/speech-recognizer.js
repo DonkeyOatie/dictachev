@@ -44,7 +44,6 @@ $(document).ready(function() {
     });
 
 
-
 function startRecognition() {
     $('.speech-content-mic').removeClass('speech-mic').addClass('speech-mic-works');
     $('#speech-page-content').focus();
